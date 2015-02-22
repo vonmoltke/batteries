@@ -12,11 +12,13 @@ typedef struct FIXED_LL_NODE
 
 typedef struct FIXED_LL
 {
-    FIXED_LL_NODE *memory_block;
+    FIXED_LL_NODE *node_memory_block;
+    char *data_memory_block;
     FIXED_LL_NODE *head;
     FIXED_LL_NODE *free;
     uint32 main_list_length;
     uint32 free_list_length;
+    size_t element_size;
 } FIXED_LL;
 
 #endif // FIXED_LINKED_LIST_H
